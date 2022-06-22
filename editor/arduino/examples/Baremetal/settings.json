@@ -1,0 +1,1 @@
+{"baud": "115200", "subnet": "255.255.255.0", "com_port": "COM26", "mb_serial": true, "last_update": 0, "ip": "", "pwd": "", "gateway": "", "mac": "0xDE, 0xAD, 0xBE, 0xEF, 0xDE, 0xAD", "dns": "", "tcp_iface": "Ethernet", "ssid": "", "mb_tcp": false, "board_type": "P1AM-100", "serial_iface": "Serial"}

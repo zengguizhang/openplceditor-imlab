@@ -1,0 +1,1168 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project xmlns:ns1="http://www.plcopen.org/xml/tc6_0201" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.plcopen.org/xml/tc6_0201">
+  <fileHeader companyName="未知" productName="未命名" productVersion="1" creationDateTime="2022-05-25T09:42:58"/>
+  <contentHeader name="未命名" modificationDateTime="2022-06-20T18:43:07">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="10" y="10"/>
+      </fbd>
+      <ld>
+        <scaling x="10" y="10"/>
+      </ld>
+      <sfc>
+        <scaling x="10" y="10"/>
+      </sfc>
+    </coordinateInfo>
+  </contentHeader>
+  <types>
+    <dataTypes/>
+    <pous>
+      <pou name="MC_Power" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="Axis">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Enable">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Enable_Positive">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Enable_Negative">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Override">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="BufferMode">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Options">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Status">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Active">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Error">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ErrorID">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[Axis := 1;]]></xhtml:p>
+          </ST>
+        </body>
+        <documentation>
+          <xhtml:p><![CDATA[使能]]></xhtml:p>
+        </documentation>
+      </pou>
+      <pou name="MC_Reset" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="Axis">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Execute">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Error">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ErrorID">
+              <type>
+                <UDINT/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[Axis := 1;]]></xhtml:p>
+          </ST>
+        </body>
+        <documentation>
+          <xhtml:p><![CDATA[重置]]></xhtml:p>
+        </documentation>
+      </pou>
+      <pou name="MC_HaltCA" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="Axis">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Excute">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Deceleration">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Jerk">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Gap">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Options">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Active">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="CommandAborted">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Error">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ErrorId">
+              <type>
+                <UDINT/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[Axis := 1;]]></xhtml:p>
+          </ST>
+        </body>
+        <documentation>
+          <xhtml:p><![CDATA[防碰撞停止]]></xhtml:p>
+        </documentation>
+      </pou>
+      <pou name="MC_GearInPosCA" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="Master">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Slave">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Execute">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ContinuousUpdate">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="RatioNumerator">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="RatioDenumerator">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="MasterSyncPosition">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="SlaveSyncPosition">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="SyncStrategy">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="SyncMode">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="MasterStartDistance">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Velocity">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Acceleration">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Deceleration">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Jerk">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Gap">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="BufferMode">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Options">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="StartSync">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="StartSync0">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="InSync">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Active">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="CommandAborted">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Error">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ErrorId">
+              <type>
+                <UINT/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[Master := 1;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MC_MoveAbsoluteCA" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="Axis">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Excute">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ContinuousUpdate">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Position">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Velocity">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Acceleration">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Deceleration">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Jerk">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Gap">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="BufferMode">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Direction">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Options">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Active">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="CommandAborted">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Error">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ErrorId">
+              <type>
+                <UINT/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[Axis := 1;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MC_MoveRelativeCA" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="Axis">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Excute">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ContinuousUpdate">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Distance">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Velocity">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Accleration">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Deceleration">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Jerk">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Gap">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="BufferMode">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Options">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Active">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="CommandAborter">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Error">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ErrorId">
+              <type>
+                <UINT/>
+              </type>
+            </variable>
+            <variable name="ErrorId0">
+              <type>
+                <UINT/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[Axis := 1;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MC_GearIn" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="Master">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Slave">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Execute">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="RatioNumerator">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="RatioDenominator">
+              <type>
+                <UINT/>
+              </type>
+            </variable>
+            <variable name="Acceleration">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Deceleration">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="Jerk">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+            <variable name="BufferMode">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Options">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="InGear">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Active">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="CommandAborted">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Error">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ErrorID">
+              <type>
+                <UINT/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[Master := 1;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MC_GroupEnable" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="AxesGroup">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Execute">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Error">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ErrorId">
+              <type>
+                <UDINT/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[AxesGroup := 1;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MC_GroupDisable" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="AxesGroup">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Execute">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Error">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ErrorId">
+              <type>
+                <UINT/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[AxesGroup := 1;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MC_GroupReset" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="AxesGroup">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Execute">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Error">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ErrorId">
+              <type>
+                <UINT/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[AxesGroup := 1;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MC_RemoveAxisFromGroup" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="AxesGroup">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Axis">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Error">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ErrorId">
+              <type>
+                <UDINT/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[AxesGroup := 1;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MC_GroupReadStatus" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="AxesGroup">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Execute">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Valid">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="GroupMoving">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="GroupHoming">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="GroupErrorStop">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="GroupNotReady">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="GroupStandby">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="GroupStopping">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="GroupDisabled">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="AllAxesStanding">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ConstantVelocity">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Accelerating">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Decelerating">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="InPosition">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Error">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ErrorId">
+              <type>
+                <UDINT/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[AxesGroup := 1;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MC_Delay" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="IN">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="PT">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Q">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ET">
+              <type>
+                <LREAL/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[IN := 1;]]></xhtml:p>
+          </ST>
+        </body>
+        <documentation>
+          <xhtml:p><![CDATA[延时指令]]></xhtml:p>
+        </documentation>
+      </pou>
+      <pou name="MC_ReadStatus" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="Axis">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+            <variable name="Execute">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Valid">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Busy">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Error">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ErrorID">
+              <type>
+                <UINT/>
+              </type>
+            </variable>
+            <variable name="ErrorStop">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Disabled">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Stopping">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Standstill">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="DiscreteMotion">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ContinuousMotion">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="SynchronizeMotion">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Homing">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="ConstantVelocity">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Accelerating">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Decelerating">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Status">
+              <type>
+                <INT/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[Axis := 1;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MC_InitSystem" pouType="functionBlock">
+        <interface>
+          <outputVars>
+            <variable name="Done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[return;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MC_CheckMover" pouType="functionBlock">
+        <interface>
+          <outputVars>
+            <variable name="Done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[return;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MC_CloseSystem" pouType="functionBlock">
+        <interface>
+          <outputVars>
+            <variable name="Done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[return;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MC_EmergencyStopSystem" pouType="functionBlock">
+        <interface>
+          <outputVars>
+            <variable name="Done">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[return;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+      <pou name="MAIN" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbMCPower">
+              <type>
+                <derived name="MC_Power"/>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml:p><![CDATA[fbMCPower(Axis := 1);
+return;]]></xhtml:p>
+          </ST>
+        </body>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations>
+      <configuration name="Config0">
+        <resource name="Res0">
+          <task name="task0" priority="0" interval="T#20ms">
+            <pouInstance name="instance0" typeName="program"/>
+          </task>
+        </resource>
+      </configuration>
+    </configurations>
+  </instances>
+</project>
